@@ -319,8 +319,8 @@ export const DATA = {
         },
       ],
       image: "/1.png",
-      // video:
-      //   "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      video:
+        "",
     },
     {
       title: "Robotizia.ai",
@@ -352,7 +352,7 @@ export const DATA = {
         // },
       ],
       image: "/2.png",
-      // video: "https://cdn.magicui.design/bento-grid.mp4",
+      video: "",
     },
     {
       title: "PromptHelper.io",
@@ -387,7 +387,7 @@ export const DATA = {
         // },
       ],
       image: "/3.png",
-      // video: "https://cdn.llm.report/openai-demo.mp4",
+      video: "",
     },
     {
       title: "Blendify",
@@ -417,8 +417,7 @@ export const DATA = {
         },
       ],
       image: "/5.png",
-      // video:
-      //   "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+      video: "",
     },
   ],
   hackathons: [
