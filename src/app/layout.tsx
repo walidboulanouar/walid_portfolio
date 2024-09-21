@@ -1,5 +1,3 @@
-// app/layout.tsx
-
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,10 +5,8 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
-import { useEffect } from "react";
+import Head from "next/head"; // Import next/head for injecting scripts
 import "./globals.css";
-
-import Script from 'next/script';
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -18,89 +14,49 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  // ... your metadata here
+  metadataBase: new URL(DATA.url),
+  title: {
+    default: DATA.name,
+    template: `%s | ${DATA.name}`,
+  },
+  description: DATA.description,
+  openGraph: {
+    title: `${DATA.name}`,
+    description: DATA.description,
+    url: DATA.url,
+    siteName: `${DATA.name}`,
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: `${DATA.name}`,
+    card: "summary_large_image",
+  },
+  verification: {
+    google: "",
+    yandex: "",
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
-    script.defer = true;
-    script.async = true;
-    document.body.appendChild(script);
-
-    script.onload = () => {
-      if (window.vapiSDK) {
-        // Initialize Vapi instance
-        const vapiInstance = window.vapiSDK.run({
-          apiKey: "your_actual_public_api_key", // Replace with your Vapi Public API key
-          assistant: "your_actual_assistant_id", // Replace with your Assistant ID
-          config: {
-            position: "bottom-right",
-            offset: "40px",
-            width: "50px",
-            height: "50px",
-            idle: {
-              color: `rgb(93, 254, 202)`,
-              type: "pill",
-              title: "Have a quick question?",
-              subtitle: "Talk with our AI assistant",
-              icon: `/icons/phone.svg`,
-            },
-            loading: {
-              color: `rgb(93, 124, 202)`,
-              type: "pill",
-              title: "Connecting...",
-              subtitle: "Please wait",
-              icon: `/icons/loader-2.svg`,
-            },
-            active: {
-              color: `rgb(255, 0, 0)`,
-              type: "pill",
-              title: "Call in progress...",
-              subtitle: "End the call.",
-              icon: `/icons/phone-off.svg`,
-            },
-          },
-        });
-
-        window.vapiInstance = vapiInstance;
-
-        // Open the Vapi assistant immediately
-        vapiInstance.open();
-
-        // Re-open assistant when it's closed
-        vapiInstance.on('widget-closed', () => {
-          vapiInstance.open();
-        });
-
-        // Add event listeners if needed
-        vapiInstance.on('call-start', () => {
-          console.log('Call has started');
-        });
-        
-        vapiInstance.on('call-end', () => {
-          console.log('Call has ended');
-        });
-      } else {
-        console.error('Vapi SDK is not available.');
-      }
-    };
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-       
-      </head>
+      
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
@@ -114,11 +70,51 @@ export default function RootLayout({
           </TooltipProvider>
         </ThemeProvider>
       </body>
-       {/* Ensure that the Vapi script is included in the head */}
-       <Script
+       {/* Inject the Vapi script here */}
+       <script
           src="https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js"
-          strategy="beforeInteractive"
-        />
+          async
+          defer
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.onload = function() {
+                var vapiInstance = window.vapiSDK.run({
+                  apiKey: "a3bd1cb9-9eb0-4c21-978a-2d4297b4905b",
+                  assistant: "136e539f-fefe-4c41-967a-f4bbbafd52e2",
+                  config: {
+                    position: "bottom-right",
+                    offset: "40px",
+                    width: "50px",
+                    height: "50px",
+                    idle: {
+                      color: 'rgb(93, 254, 202)',
+                      type: 'pill',
+                      title: 'Have a quick question?',
+                      subtitle: 'Talk with our AI assistant',
+                      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone.svg',
+                    },
+                    loading: {
+                      color: 'rgb(93, 124, 202)',
+                      type: 'pill',
+                      title: 'Connecting...',
+                      subtitle: 'Please wait',
+                      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg',
+                    },
+                    active: {
+                      color: 'rgb(255, 0, 0)',
+                      type: 'pill',
+                      title: 'Call in progress...',
+                      subtitle: 'End the call.',
+                      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg',
+                    },
+                  }
+                });
+              }
+            `,
+          }}
+        ></script>
     </html>
   );
 }
