@@ -77,24 +77,23 @@ export const DATA = {
 
   work: [
     {
-      company: "KohortPay",
+      company: "DiezAgency",
       href: "",
       badges: [],
       location: "Remote",
-      title: "Full Stack Engineer",
-      logoUrl: "/kohortpay_logo.jpg",
+      title: "CEO",
+      logoUrl: "https://framerusercontent.com/images/4Lm2SuhXHVKZyJJRUapoZ4k2RE.png?scale-down-to=512",
       start: "Sep 2023",
       end: "Present",
-      description:
-        `• Developed and implemented a seamless referral and cashback technology 
-        for e-merchants, driving high-quality customer acquisition at a fraction of the cost.
+      description: `
+        • Spearheaded the development and deployment of AI-driven solutions, transforming business operations for multiple companies.
         
-        • Integrated KohortPay into customer journeys in 15 minutes, enhancing
-        customer loyalty and acquisition strategies.
+        • Led AI strategy consultations, enabling businesses to integrate advanced machine learning models and automation tools for scaling operations.
         
-        • Achieved 10x results compared to existing coupon-based referral programs,
-        revolutionizing customer acquisition for e-merchants.
-        `,
+        • Provided AI services for diverse industries, improving customer engagement, automating processes, and increasing productivity by over 20%.
+        
+        • Established partnerships with enterprise clients, delivering tailored AI solutions that aligned with their long-term strategic goals.
+      `,
     },
     {
       company: "Bevinzey",
