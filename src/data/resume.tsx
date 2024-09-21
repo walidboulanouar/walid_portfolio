@@ -10,7 +10,7 @@ export const DATA = {
   description:
     `Full Stack & AI/Automation Expert. 
     I love converting concept into AI-Powered Solutions`,
-  summary: `A Developer @KohortPay 
+  summary: `CEO of Diez Agency
       \n🚀 Through quality service and innovative ideas, my goal is to provide AI-Powered solutions on which people can rely.
 			\n🌐 Developing highly interactive web applications using (NextJS, ReactJS, ExpressJS, NestJS, NodeJS and Python)
 			\n🔄 Implementing effective CI/CD pipelines to ensure smooth deployment and delivery of applications.
