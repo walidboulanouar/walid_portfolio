@@ -5,6 +5,7 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import Head from "next/head"; // Import next/head for injecting scripts
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -55,6 +56,53 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head>
+        {/* Inject the Vapi script here */}
+        <script
+          src="https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js"
+          async
+          defer
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.onload = function() {
+                var vapiInstance = window.vapiSDK.run({
+                  apiKey: "<your_public_api_key>",
+                  assistant: "<assistant_id>",
+                  config: {
+                    position: "bottom-right",
+                    offset: "40px",
+                    width: "50px",
+                    height: "50px",
+                    idle: {
+                      color: 'rgb(93, 254, 202)',
+                      type: 'pill',
+                      title: 'Have a quick question?',
+                      subtitle: 'Talk with our AI assistant',
+                      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone.svg',
+                    },
+                    loading: {
+                      color: 'rgb(93, 124, 202)',
+                      type: 'pill',
+                      title: 'Connecting...',
+                      subtitle: 'Please wait',
+                      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg',
+                    },
+                    active: {
+                      color: 'rgb(255, 0, 0)',
+                      type: 'pill',
+                      title: 'Call in progress...',
+                      subtitle: 'End the call.',
+                      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg',
+                    },
+                  }
+                });
+              }
+            `,
+          }}
+        ></script>
+      </Head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
