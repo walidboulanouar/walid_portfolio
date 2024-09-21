@@ -10,7 +10,8 @@ export default function Page() {
       <div className="text-center max-w-2xl">
         <h1 className="text-4xl font-bold mb-4">AI Caller Assistant Demo</h1>
         <p className="text-lg mb-8">
-          Welcome to the AI Call Assistant Demo. Click the button below to start chatting with our AI assistant.
+        Welcome to the AI Caller Assistant Demo. This demo is not yet linked with any CRM or third-party systems.
+          It's just to show you what we can achieve in a short time.
         </p>
       </div>
     </main>
