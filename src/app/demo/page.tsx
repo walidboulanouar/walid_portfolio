@@ -1,15 +1,38 @@
 // app/page.tsx
 
 import React from 'react';
+import { ChatBubbleIcon } from '@radix-ui/react-icons'; 
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <div className="text-center max-w-2xl">
-        <h1 className="text-4xl font-bold mb-4">AI Caller Assistant Demo</h1>
-        <p className="text-lg mb-8">
-          Welcome to the AI Caller Assistant Demo. This demo is not yet linked with any CRM or third-party systems. It&apos;s just to show you what we can achieve in a short time.  The avalaible time is All Sunday morning you can ask him to book a meetin, then you can see the result
+    <main className="min-h-screen bg-gradient-to-r from-blue-50 to-indigo-100 flex items-center justify-center py-12 relative">
+      <div className="bg-white shadow-2xl rounded-xl max-w-3xl mx-auto p-10">
+        <h1 className="text-5xl font-extrabold text-center text-indigo-600 mb-8">
+          AI Caller Assistant Demo
+        </h1>
+        <p className="text-lg text-gray-600 text-center mb-6 leading-relaxed">
+          Welcome to the AI Caller Assistant Demo. This demo is not yet linked
+          with any CRM or third-party systems. It&apos;s just to show you what we can
+          achieve in a short time.
         </p>
+        <p className="text-lg text-gray-600 text-center mb-8 leading-relaxed">
+          The available time is all Sunday morning. You can ask the assistant to
+          book a meeting, then you can see the result.
+        </p>
+      </div>
+
+      {/* Floating Icon */}
+      <div className="absolute bottom-8 right-8 flex items-center space-x-2">
+        <span className="text-sm font-medium text-gray-700">
+          Talk to our AI Assistant
+        </span>
+        <a
+          href="#"
+          className="bg-indigo-600 p-4 rounded-full text-white shadow-lg hover:bg-indigo-700 transition duration-200 ease-in-out"
+          aria-label="Talk to AI Assistant"
+        >
+          <ChatBubbleIcon className='h-5 w-5' />
+        </a>
       </div>
     </main>
   );
