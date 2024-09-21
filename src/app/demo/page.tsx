@@ -8,7 +8,7 @@ export default function Page() {
       <div className="text-center max-w-2xl">
         <h1 className="text-4xl font-bold mb-4">AI Caller Assistant Demo</h1>
         <p className="text-lg mb-8">
-          Welcome to the AI Caller Assistant Demo. This demo is not yet linked with any CRM or third-party systems. It&apos;s just to show you what we can achieve in a short time.
+          Welcome to the AI Caller Assistant Demo. This demo is not yet linked with any CRM or third-party systems. It&apos;s just to show you what we can achieve in a short time.  The avalaible time is All Sunday morning you can ask him to book a meetin, then you can see the result
         </p>
       </div>
     </main>
