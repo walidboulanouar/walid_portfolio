@@ -98,15 +98,15 @@ export default function RootLayout({
                     loading: {
                       color: 'rgb(93, 124, 202)',
                       type: 'pill',
-                      title: 'Connecting...',
-                      subtitle: 'Please wait',
+                        title: 'Connexion en cours...',
+                        subtitle: 'Veuillez patienter',
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg',
                     },
                     active: {
                       color: 'rgb(255, 0, 0)',
                       type: 'pill',
-                      title: 'Call in progress...',
-                      subtitle: 'End the call.',
+                      title: 'Appel en cours...',
+              subtitle: "Terminez l\'appel.",
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg',
                     },
                   }
