@@ -106,7 +106,7 @@ export default function RootLayout({
                       color: 'rgb(255, 0, 0)',
                       type: 'pill',
                       title: 'Appel en cours...',
-              subtitle: "Terminez l\'appel.",
+              subtitle: "Terminez l'appel.",
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg',
                     },
                   }
