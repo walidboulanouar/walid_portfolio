@@ -91,8 +91,8 @@ export default function RootLayout({
                     idle: {
                       color: 'rgb(93, 254, 202)',
                       type: 'pill',
-                      title: 'Have a quick question?',
-                      subtitle: 'Talk with our AI assistant',
+                       title: 'Avez-vous un problème ?',
+                        subtitle: 'Nous sommes ici pour vous aider. Parlez à notre assistant IA',
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone.svg',
                     },
                     loading: {
