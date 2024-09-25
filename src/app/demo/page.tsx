@@ -25,18 +25,7 @@ export default function Page() {
       </div>
 
       {/* Floating Icon */}
-      <div className="absolute bottom-8 right-8 flex items-center space-x-2">
-        <span className="text-sm font-medium text-gray-600">
-          Une question rapide ?
-        </span>
-        <a
-          href="#"
-          className="bg-green-500 p-4 rounded-full text-white shadow-lg hover:bg-green-600 transition duration-200 ease-in-out"
-          aria-label="Parlez à l&apos;assistant IA"
-        >
-          <ChatBubbleIcon width={24} height={24} />
-        </a>
-      </div>
+    
     </main>
   );
 }

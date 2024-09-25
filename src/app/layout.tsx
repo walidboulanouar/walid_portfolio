@@ -91,22 +91,22 @@ export default function RootLayout({
                     idle: {
                       color: 'rgb(93, 254, 202)',
                       type: 'pill',
-                      title: 'Have a quick question?',
-                      subtitle: 'Talk with our AI assistant',
+                      title: 'Avez-vous un problème ?',
+                      subtitle: 'Nous sommes ici pour vous aider. Parlez à notre assistant IA',
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone.svg',
                     },
                     loading: {
                       color: 'rgb(93, 124, 202)',
                       type: 'pill',
-                      title: 'Connecting...',
-                      subtitle: 'Please wait',
+                      title: 'Connexion en cours...',
+                      subtitle: 'Veuillez patienter',
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg',
                     },
                     active: {
                       color: 'rgb(255, 0, 0)',
                       type: 'pill',
-                      title: 'Call in progress...',
-                      subtitle: 'End the call.',
+                      title: 'Appel en cours...',
+                      subtitle: 'Terminez l\'appel.',
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg',
                     },
                   }
