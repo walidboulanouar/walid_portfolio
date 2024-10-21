@@ -81,8 +81,8 @@ export default function RootLayout({
             __html: `
               window.onload = function() {
                 var vapiInstance = window.vapiSDK.run({
-                  apiKey: "93b15570-22e1-4629-a5d1-bdc74f551f2d",
-                  assistant: "59daa356-099b-48b0-bbd9-ea8dd661ff6e",
+                  apiKey: "3fa83ea4-7074-4208-bb78-510e60f6757a",
+                  assistant: "deca2a4a-fd01-4acc-9f69-eed0b40c4256",
                   config: {
                     position: "bottom-right",
                     offset: "40px",
@@ -91,22 +91,22 @@ export default function RootLayout({
                     idle: {
                       color: 'rgb(93, 254, 202)',
                       type: 'pill',
-                       title: 'Avez-vous un problème ?',
-                        subtitle: 'Nous sommes ici pour vous aider. Parlez à notre assistant IA',
+                      title: 'How can we help?',
+                      subtitle: 'We’re here to assist you. Talk to our AI assistant for help.',
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone.svg',
                     },
                     loading: {
                       color: 'rgb(93, 124, 202)',
                       type: 'pill',
-                        title: 'Connexion en cours...',
-                        subtitle: 'Veuillez patienter',
+                      title: 'Connecting...',
+                      subtitle: 'Please wait a moment.',
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg',
                     },
                     active: {
                       color: 'rgb(255, 0, 0)',
                       type: 'pill',
-                      title: 'Appel en cours...',
-              subtitle: "Terminez l'appel.",
+                         title: 'Call in Progress...',
+                          subtitle: "Please finish the call.",
                       icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg',
                     },
                   }
