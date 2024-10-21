@@ -1,3 +1,4 @@
+import React from 'react';
 import { ChatBubbleIcon, Cross2Icon } from "@radix-ui/react-icons";
 import { useState } from "react";
 
@@ -86,8 +87,11 @@ export default function Page() {
 
       {/* Enlarged Image Overlay */}
       {enlargedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="relative w-full h-full">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeEnlargedImage}
+        >
+          <div className="relative w-full h-full" onClick={(e) => e.stopPropagation()}>
             <img
               src={enlargedImage}
               alt="Enlarged"
