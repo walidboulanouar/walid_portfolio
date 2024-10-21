@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { ChatBubbleIcon, Cross2Icon } from "@radix-ui/react-icons";
 import { useState } from "react";
