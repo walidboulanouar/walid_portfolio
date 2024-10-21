@@ -32,7 +32,7 @@ export default function Page() {
       <div className="grid md:grid-cols-2 gap-8 max-w-6xl w-full">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <img
-            src="/1ai.jpeg"
+            src="/2ai.jpeg"
             alt="Outbound Calls"
             className="w-full h-auto cursor-pointer"
             onClick={() => handleImageClick("/1ai.jpeg")}
@@ -57,7 +57,7 @@ export default function Page() {
 
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <img
-            src="/2ai.jpeg"
+            src="/1ai.jpeg"
             alt="Inbound Calls"
             className="w-full h-auto cursor-pointer"
             onClick={() => handleImageClick("/2ai.jpeg")}
