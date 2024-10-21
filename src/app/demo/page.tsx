@@ -1,6 +1,5 @@
 "use client";
 
-import React from 'react';
 import { ChatBubbleIcon, Cross2Icon } from "@radix-ui/react-icons";
 import { useState } from "react";
 
@@ -23,9 +22,26 @@ export default function Page() {
         </h1>
         <p className="text-lg text-gray-700 text-center mb-6 leading-relaxed">
           Welcome to the demo of our AI-powered voice assistant. This demo
-          highlights how the AI agent is seamlessly integrated with Make and
-          other tools, simulating CRM data integration with Excel and automatic
-          scheduling with Google Calendar.
+          showcases how the AI agent is seamlessly integrated with
+          <span className="font-bold">
+            {" "}
+            Make, HubSpot CRM, Smartsheets, CallRail, ElevenLabs, Google
+            Calendar,{" "}
+          </span>
+          and external lead sources like{" "}
+          <span className="font-bold">
+            Angie’s List, Google Local Services, and Yelp.
+          </span>
+          It demonstrates CRM data integration, appointment scheduling, and
+          real-time voice generation.
+        </p>
+        <p className="text-lg text-gray-700 text-center mb-6 leading-relaxed">
+          The AI assistant collects client information, validates service areas,
+          and automatically syncs data with HubSpot and Smartsheets. It also
+          tracks all calls using CallRail and leverages ElevenLabs for natural
+          voice interactions. Additionally, meetings are automatically scheduled
+          via Google Calendar based on the assistant’s interactions with
+          clients.
         </p>
       </div>
 
@@ -89,11 +105,14 @@ export default function Page() {
 
       {/* Enlarged Image Overlay */}
       {enlargedImage && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
           onClick={closeEnlargedImage}
         >
-          <div className="relative w-full h-full" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="relative w-full h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img
               src={enlargedImage}
               alt="Enlarged"
