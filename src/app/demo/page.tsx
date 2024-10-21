@@ -35,7 +35,7 @@ export default function Page() {
             src="/2ai.jpeg"
             alt="Outbound Calls"
             className="w-full h-auto cursor-pointer"
-            onClick={() => handleImageClick("/1ai.jpeg")}
+            onClick={() => handleImageClick("/2ai.jpeg")}
           />
           <div className="p-6">
             <h2 className="text-2xl font-bold text-indigo-600 mb-4">
@@ -60,7 +60,7 @@ export default function Page() {
             src="/1ai.jpeg"
             alt="Inbound Calls"
             className="w-full h-auto cursor-pointer"
-            onClick={() => handleImageClick("/2ai.jpeg")}
+            onClick={() => handleImageClick("/1ai.jpeg")}
           />
           <div className="p-6">
             <h2 className="text-2xl font-bold text-indigo-600 mb-4">
