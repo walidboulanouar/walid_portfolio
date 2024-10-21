@@ -81,7 +81,7 @@ export default function RootLayout({
             __html: `
               window.onload = function() {
                 var vapiInstance = window.vapiSDK.run({
-                  apiKey: "d511e2ab-5a03-4d77-a7db-e59acc560c83",
+                  apiKey: "a3bd1cb9-9eb0-4c21-978a-2d4297b4905b",
                   assistant: "deca2a4a-fd01-4acc-9f69-eed0b40c4256",
                   config: {
                     position: "bottom-right",
