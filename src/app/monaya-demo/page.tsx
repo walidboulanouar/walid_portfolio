@@ -33,9 +33,7 @@ export default function Page() {
           Wisab Transfer Taxi Service Demo
         </h1>
         <p className="text-lg text-gray-700 text-center mb-6 leading-relaxed">
-          Welcome to the demo of Wisab Transfer's chatbot! This demo showcases how our chatbot can 
-          assist you with booking private taxis, getting quotes, learning about our service areas, 
-          and answering any questions you may have about transfers to locations in Belgium and Europe.
+         {" Welcome to the demo of Wisab Transfer's chatbot! This demo showcases how our chatbot can assist you with booking private taxis, getting quotes, learning about our service areas,  and answering any questions you may have about transfers to locations in Belgium and Europe."}
         </p>
       </div>
     </main>
