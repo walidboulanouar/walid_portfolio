@@ -20,10 +20,11 @@ export default function Page() {
     // Wait for the chatbot to load and then hide the footer
     script.onload = () => {
       const hideFooter = () => {
-        // Find the footer element in the iframe and hide it
-        const chatbotIframe = document.querySelector("iframe[src*='chatbase']");
-        if (chatbotIframe) {
-          const iframeDocument = chatbotIframe.contentDocument || chatbotIframe.contentWindow.document;
+        // Find the chatbot iframe and cast it as HTMLIFrameElement
+        const chatbotIframe = document.querySelector("iframe[src*='chatbase']") as HTMLIFrameElement;
+        
+        if (chatbotIframe && chatbotIframe.contentDocument) {
+          const iframeDocument = chatbotIframe.contentDocument;
           const footer = iframeDocument.querySelector("footer");
           if (footer) {
             footer.style.display = "none";
