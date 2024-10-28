@@ -17,18 +17,36 @@ export default function Page() {
     script.setAttribute("domain", "www.chatbase.co");
     document.body.appendChild(script);
 
-    // Wait for the chatbot to load and then hide the footer
+    console.log("Chatbase script added.");
+
     script.onload = () => {
+      console.log("Chatbase script loaded.");
+
       const hideFooter = () => {
-        // Find the chatbot iframe and cast it as HTMLIFrameElement
+        // Cast the iframe explicitly to HTMLIFrameElement
         const chatbotIframe = document.querySelector("iframe[src*='chatbase']") as HTMLIFrameElement;
-        
-        if (chatbotIframe && chatbotIframe.contentDocument) {
-          const iframeDocument = chatbotIframe.contentDocument;
-          const footer = iframeDocument.querySelector("footer");
-          if (footer) {
-            footer.style.display = "none";
+        if (chatbotIframe) {
+          console.log("Chatbot iframe found.");
+
+          try {
+            // Access contentDocument safely after casting
+            const iframeDocument = chatbotIframe.contentDocument;
+            if (iframeDocument) {
+              const footer = iframeDocument.querySelector("footer");
+              if (footer) {
+                footer.style.display = "none";
+                console.log("Chatbase footer found and hidden.");
+              } else {
+                console.log("Footer not found in iframe.");
+              }
+            } else {
+              console.log("Iframe document not accessible.");
+            }
+          } catch (error) {
+            console.error("Error accessing iframe content:", error);
           }
+        } else {
+          console.log("Chatbot iframe not found.");
         }
       };
 
@@ -36,12 +54,16 @@ export default function Page() {
       const interval = setInterval(hideFooter, 500);
 
       // Stop checking after a short time to avoid unnecessary resource usage
-      setTimeout(() => clearInterval(interval), 5000);
+      setTimeout(() => {
+        clearInterval(interval);
+        console.log("Stopped checking for footer after timeout.");
+      }, 5000);
     };
 
     // Clean up the script on component unmount
     return () => {
       document.body.removeChild(script);
+      console.log("Chatbase script removed on component unmount.");
     };
   }, []);
 
