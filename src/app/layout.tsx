@@ -76,7 +76,45 @@ export default function RootLayout({
           async
           defer
         ></script>
-      
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.onload = function() {
+                var vapiInstance = window.vapiSDK.run({
+                  apiKey: "a3bd1cb9-9eb0-4c21-978a-2d4297b4905b",
+                  assistant: "deca2a4a-fd01-4acc-9f69-eed0b40c4256",
+                  config: {
+                    position: "bottom-right",
+                    offset: "40px",
+                    width: "50px",
+                    height: "50px",
+                    idle: {
+                      color: 'rgb(93, 254, 202)',
+                      type: 'pill',
+                      title: 'How can we help?',
+                      subtitle: 'We’re here to assist you. Talk to our AI assistant for help.',
+                      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone.svg',
+                    },
+                    loading: {
+                      color: 'rgb(93, 124, 202)',
+                      type: 'pill',
+                      title: 'Connecting...',
+                      subtitle: 'Please wait a moment.',
+                      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg',
+                    },
+                    active: {
+                      color: 'rgb(255, 0, 0)',
+                      type: 'pill',
+                         title: 'Call in Progress...',
+                          subtitle: "Please finish the call.",
+                      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg',
+                    },
+                  }
+                });
+              }
+            `,
+          }}
+        ></script>
     </html>
   );
 }
