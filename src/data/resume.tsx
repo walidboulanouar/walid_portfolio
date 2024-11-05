@@ -82,7 +82,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Full Stack Engineer",
-      logoUrl: "https://framerusercontent.com/images/4Lm2SuhXHVKZyJJRUapoZ4k2RE.png?scale-down-to=512",
+      logoUrl: "https://my.kohortpay.dev/kohor-inf/logo.png",
       start: "Sep 2023",
       end: "Present",
       description: `
