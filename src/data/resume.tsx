@@ -10,7 +10,7 @@ export const DATA = {
   description:
     `Full Stack & AI/Automation Expert. 
     I love converting concept into AI-Powered Solutions`,
-  summary: `CEO of Diez Agency
+  summary: `Full Stack Engineer
       \n🚀 Through quality service and innovative ideas, my goal is to provide AI-Powered solutions on which people can rely.
 			\n🌐 Developing highly interactive web applications using (NextJS, ReactJS, ExpressJS, NestJS, NodeJS and Python)
 			\n🔄 Implementing effective CI/CD pipelines to ensure smooth deployment and delivery of applications.
@@ -77,22 +77,18 @@ export const DATA = {
 
   work: [
     {
-      company: "DiezAgency",
-      href: "",
+      company: "Kohortpay",
+      href: "https://my.kohortpay.dev/kohor-inf/logo.png",
       badges: [],
       location: "Remote",
-      title: "CEO",
+      title: "Full Stack Engineer",
       logoUrl: "https://framerusercontent.com/images/4Lm2SuhXHVKZyJJRUapoZ4k2RE.png?scale-down-to=512",
       start: "Sep 2023",
       end: "Present",
       description: `
-        • Spearheaded the development and deployment of AI-driven solutions, transforming business operations for multiple companies.
-        
-        • Led AI strategy consultations, enabling businesses to integrate advanced machine learning models and automation tools for scaling operations.
-        
-        • Provided AI services for diverse industries, improving customer engagement, automating processes, and increasing productivity by over 20%.
-        
-        • Established partnerships with enterprise clients, delivering tailored AI solutions that aligned with their long-term strategic goals.
+        Developed an AI-driven referral and cashback platform for e-merchants, achieving a 10x increase in customer acquisition efficiency.
+Integrated solutions within 15 minutes, optimizing customer journeys and loyalty strategies using Node.js, React, and Next.js.
+Leveraged NestJS and Firebase to build a scalable backend architecture, improving system efficiency by 20%.
       `,
     },
     {
