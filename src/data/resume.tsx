@@ -10,7 +10,7 @@ export const DATA = {
   description:
     `Full Stack & AI/Automation Expert. 
     I love converting concept into AI-Powered Solutions`,
-  summary: `A Developer @KohortPay 
+  summary: `Full Stack Engineer
       \n🚀 Through quality service and innovative ideas, my goal is to provide AI-Powered solutions on which people can rely.
 			\n🌐 Developing highly interactive web applications using (NextJS, ReactJS, ExpressJS, NestJS, NodeJS and Python)
 			\n🔄 Implementing effective CI/CD pipelines to ensure smooth deployment and delivery of applications.
@@ -77,24 +77,19 @@ export const DATA = {
 
   work: [
     {
-      company: "KohortPay",
-      href: "",
+      company: "Kohortpay",
+      href: "https://my.kohortpay.dev/kohor-inf/logo.png",
       badges: [],
       location: "Remote",
       title: "Full Stack Engineer",
-      logoUrl: "/kohortpay_logo.jpg",
+      logoUrl: "https://my.kohortpay.dev/kohor-inf/logo.png",
       start: "Sep 2023",
       end: "Present",
-      description:
-        `• Developed and implemented a seamless referral and cashback technology 
-        for e-merchants, driving high-quality customer acquisition at a fraction of the cost.
-        
-        • Integrated KohortPay into customer journeys in 15 minutes, enhancing
-        customer loyalty and acquisition strategies.
-        
-        • Achieved 10x results compared to existing coupon-based referral programs,
-        revolutionizing customer acquisition for e-merchants.
-        `,
+      description: `
+        Developed an AI-driven referral and cashback platform for e-merchants, achieving a 10x increase in customer acquisition efficiency.
+Integrated solutions within 15 minutes, optimizing customer journeys and loyalty strategies using Node.js, React, and Next.js.
+Leveraged NestJS and Firebase to build a scalable backend architecture, improving system efficiency by 20%.
+      `,
     },
     {
       company: "Bevinzey",
